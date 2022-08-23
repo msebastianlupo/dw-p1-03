@@ -12,8 +12,6 @@ let acumuladorPromo = 0;
 let minNota = 0;
 let maxNota = 0;
 
-
-
 do{
     ingreso = parseInt(prompt("Ingrese una nota. (tipear 0, dejar vacío o bien presionar 'Cancelar' para terminar)"));
     if(ingreso > 0 && ingreso < 11){
@@ -54,5 +52,5 @@ if(minNota){
     if(contadorPromo){
         promedioPromo = Number((acumuladorPromo / contadorPromo).toFixed(1));
     }
-    document.write(`<b>***PROMEDIOS DISCRIMINANDO POR SEGMENTO - TOTAL ${contadorDesa + contadorApro} ALUMNO/S***<br>Promedio entre desaprobados: ${promedioDesa} - (${contadorDesa} alumno/s)<br>Promedio entre aprobados: ${promedioApro} - (${contadorApro} alumno/s)<br>Promedio entre promocionados: ${promedioPromo} - (${contadorPromo} alumno/s)<br>Nota mínima: ${minNota}<br>Nota máxima: ${maxNota}</b>`);
+    document.write(`<b>***PROMEDIOS DISCRIMINANDO POR SEGMENTO - TOTAL ${contadorDesa + contadorApro} ALUMNO/S***<br>Promedio entre ${contadorDesa} desaprobado/s: ${promedioDesa}<br>Promedio entre ${contadorApro} aprobado/s: ${promedioApro}<br>Promedio entre ${contadorPromo} promocionado/s: ${promedioPromo}<br>Nota mínima: ${minNota}<br>Nota máxima: ${maxNota}</b>`);
 }
